@@ -19,10 +19,11 @@ Identity***, a principal obra de referência sobre **SPIFFE** e **SPIRE**.
 | **Idioma desta tradução** | Português (pt-BR) |
 | **Status** | 🚧 Em andamento |
 
-## 📥 O livro traduzido
+## 📥 Baixar o livro traduzido
 
-O PDF da tradução fica em [`livro/`](./livro/). Veja as instruções de download
-e a convenção de nome do arquivo em [`livro/README.md`](./livro/README.md).
+**➡️ [Baixar o PDF (pt-BR)](https://github.com/aslancarlos/SPIFFEBook/raw/main/livro/SPIFFE-Book_pt-br.pdf)**
+
+Ou navegue em [`livro/`](./livro/SPIFFE-Book_pt-br.pdf).
 
 > A fonte editável (texto/diagramação) **não é distribuída** neste repositório
 > no momento — apenas o PDF resultante.
