@@ -1,0 +1,12 @@
+# Git LFS — versiona binários grandes (o PDF do livro) fora do histórico normal.
+# Requer git-lfs instalado: `git lfs install` (uma vez por máquina).
+*.pdf  filter=lfs diff=lfs merge=lfs -text
+
+# Outros binários comuns de diagramação, caso venham a ser adicionados:
+*.png  filter=lfs diff=lfs merge=lfs -text
+*.jpg  filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+
+# Normalização de fim de linha para arquivos de texto.
+*.md   text eol=lf
+LICENSE text eol=lf

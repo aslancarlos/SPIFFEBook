@@ -1,0 +1,25 @@
+# SO / editores
+.DS_Store
+Thumbs.db
+*~
+.idea/
+.vscode/
+*.swp
+
+# Arquivos temporários de processamento de tradução / diagramação
+~$*
+*.tmp
+*.bak
+
+# Fontes editáveis NÃO publicadas inicialmente (mantidas fora do repo público).
+# Ajuste/remova conforme decidir abrir a fonte.
+/fonte/
+*.docx
+*.odt
+*.indd
+*.idml
+
+# Saídas de build de ferramentas de livro (caso passe a usar mdBook/Honkit)
+/book/
+/_book/
+node_modules/
