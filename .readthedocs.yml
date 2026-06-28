@@ -1,28 +1,20 @@
 # ReadTheDocs Configuration File
 # https://docs.readthedocs.io/en/stable/config-file/v2.html
- 
+
 version: 2
- 
-# Build documentation in the docs/ directory with MkDocs
+
+# Build environment
 build:
   os: ubuntu-24.04
   tools:
     python: "3.13"
- 
+
+# Build documentation with MkDocs
 mkdocs:
   configuration: mkdocs.yml
   fail_on_warning: false
- 
-# Optional but recommended, if your documentation has a strict set of redirects
-# redirects:
-#   index.html: introduction.html
- 
-# Configure which Python version to use
+
+# Python dependencies needed to build the docs
 python:
-  version: 3.13
   install:
-    - requirements: docs/requirements.txt
- 
-# Optional: Notify on build completion
-notifications:
-  email: false
+    - requirements: docs_requirements.txt

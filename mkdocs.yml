@@ -1,22 +1,18 @@
 site_name: SPIFFE e SPIRE - Tradução PT-BR
 site_description: Tradução completa em português brasileiro do livro "Solving the Bottom Turtle"
 site_author: Aslan Carlos M. Ramos
-site_url: https://spiffe-spire-pt-br.readthedocs.io/
-repo_url: https://github.com/seu-usuario/spiffe-spire-pt-br
-repo_name: spiffe-spire-pt-br
+site_url: https://spiffebook.readthedocs.io/
+repo_url: https://github.com/aslancarlos/SPIFFEBook
+repo_name: aslancarlos/SPIFFEBook
 edit_uri: edit/main/docs/
 
-# Language and locale
-language: pt-BR
-locale: pt_BR
+docs_dir: docs
 
 # Theme configuration
 theme:
   name: material
   language: pt
-  logo: assets/logo.png
-  favicon: assets/favicon.png
-  
+
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -26,7 +22,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Modo escuro
-    
+
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -35,7 +31,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Modo claro
-  
+
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -43,7 +39,6 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.expand
-    - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -52,13 +47,19 @@ theme:
 # Extensions
 markdown_extensions:
   - admonition
-  - pymdownx.emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       use_pygments: true
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.details
+  - pymdownx.snippets:
+      base_path:
+        - .
+      check_paths: true
   - tables
   - footnotes
   - attr_list
@@ -75,23 +76,13 @@ plugins:
 
 # Navigation structure
 nav:
-  - Home: index.md
+  - Início: index.md
   - Notas de Tradução: notas-traducao.md
-  - Prólogo: 00-prologo.md
-  - Capítulo 1: Introdução aos Conceitos de SPIFFE e SPIRE: 01-introducao.md
-  - Capítulo 2: Benefícios: 02-beneficios.md
-  - Capítulo 3: Antes de Começar: 03-antes-de-comecar.md
-  - Capítulo 4: Fundamentos da Identidade de Carga de Trabalho: 04-fundamentos.md
-  - Capítulo 5: O Padrão SPIFFE: 05-padrao-spiffe.md
-  - Capítulo 6: Projetando uma Implantação de SPIRE: 06-projetando.md
-  - Capítulo 7: Implementando SPIRE: 07-implementando.md
-  - Capítulo 8: Usando Identidades SPIFFE para Informar Autorização: 08-autorizacao.md
-  - Capítulo 9: Comparando SPIFFE com Outras Tecnologias: 09-comparacao.md
-  - Capítulo 10: Histórias de Praticantes: 10-praticantes.md
-  - Glossário: glossario.md
-  - Notas e Referências: notas-referencias.md
-  - Epílogo: epílogo.md
-  - Sobre a Tradução: sobre.md
+  - Glossário (EN → pt-BR): glossario.md
+  - Como Contribuir: contribuindo.md
+  - Atribuição e Licença: atribuicao.md
+  - Changelog: changelog.md
+  - Sobre: sobre.md
 
 # Copyright
 copyright: >
@@ -103,8 +94,4 @@ copyright: >
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/seu-usuario/spiffe-spire-pt-br
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/seu-perfil
-  version:
-    provider: mike
+      link: https://github.com/aslancarlos/SPIFFEBook
