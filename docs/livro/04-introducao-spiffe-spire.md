@@ -67,9 +67,9 @@ Em vez de inventar um novo tipo de documento que os softwares precisariam aprend
 
 ### X509-SVID
 
-Um X509-SVID codifica uma identidade SPIFFE em um certificado X.509 padrão. O SPIFFE ID correspondente é definido como um tipo de URI no campo de extensão Subject Alternative Name (SAN). Embora apenas um campo URI SAN seja permitido em um X509-SVID, o certificado pode conter qualquer número de campos SAN de outros tipos, incluindo DNS SANs.
+Um X509-SVID codifica uma identidade SPIFFE em um certificado X.509 padrão. O SPIFFE ID correspondente é definido como um tipo de URI no campo de extensão Subject Alternative Name (SAN). Embora apenas um campo URI SAN seja permitido em um X509-SVID, o certificado pode conter qualquer número de campos SAN de outros tipos, incluindo DNS SANs.[^1]
 
-\[1\] - <https://tools.ietf.org/html/rfc5280>
+[^1]: <https://tools.ietf.org/html/rfc5280>
 
 <p><strong>✅ X509-SVID é o formato recomendado</strong></p>
 <p>X509-SVIDs são recomendados onde quer que seja possível, pois têm melhores propriedades de segurança do que JWT-SVIDs. Especificamente, quando usados em conjunto com TLS, um certificado X.509 não pode ser gravado e reproduzido por um intermediário (ataque de replay).</p>

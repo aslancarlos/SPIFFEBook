@@ -6,7 +6,7 @@
 
 Não chegamos onde estamos hoje sem antes passar por algumas dores do crescimento.
 
-Quando a internet se tornou amplamente disponível em 1981, havia apenas 213 servidores distintos e a segurança mal era considerada uma preocupação \[1\]. Com o aumento do número de computadores interconectados, a segurança continuou sendo um ponto fraco: vulnerabilidades facilmente exploráveis levaram a ataques em massa, como o Morris Worm \[2\], que comprometeu a maioria dos servidores Unix na internet em 1988, e o worm Slammer \[3\], que se espalhou por centenas de milhares de servidores Windows em 2003.
+Quando a internet se tornou amplamente disponível em 1981, havia apenas 213 servidores distintos e a segurança mal era considerada uma preocupação [^1]. Com o aumento do número de computadores interconectados, a segurança continuou sendo um ponto fraco: vulnerabilidades facilmente exploráveis levaram a ataques em massa, como o Morris Worm [^2], que comprometeu a maioria dos servidores Unix na internet em 1988, e o worm Slammer [^3], que se espalhou por centenas de milhares de servidores Windows em 2003.
 
 Com o passar das décadas, os padrões convencionais de defesa de perímetro existentes não são adequados às arquiteturas computacionais nem aos limites em constante evolução da tecnologia moderna. Soluções pontuais e tecnologias foram se empilhando umas sobre as outras para cobrir as rachaduras crescentes em que os conceitos básicos de segurança de rede não acompanharam as tendências de modernização.
 
@@ -16,14 +16,14 @@ Ao longo dos anos, observamos três tendências consideráveis que evidenciam os
 
 - O software não roda mais em servidores individuais controlados pela organização. Desde 2015, novos softwares são tipicamente construídos como uma coleção de microsserviços que podem ser escalados individualmente ou migrados para provedores de hospedagem na nuvem. Se você não consegue traçar uma linha precisa ao redor dos serviços que precisam ser protegidos, é impossível construir uma barreira ao redor deles.
 
-\[1\] - <https://tools.ietf.org/html/rfc1296>\
-\[2\] - <https://spaf.cerias.purdue.edu/tech-reps/823.pdf>
+[^1]: <https://tools.ietf.org/html/rfc1296>
+[^2]: <https://spaf.cerias.purdue.edu/tech-reps/823.pdf>
 
-\[3\] - <https://www.caida.org/publications/papers/2003/sapphire/sapphire.html>
+[^3]: <https://www.caida.org/publications/papers/2003/sapphire/sapphire.html>
 
-\[4\] - <https://nvd.nist.gov/vuln/search/statistics>
+[^4]: <https://nvd.nist.gov/vuln/search/statistics>
 
-Você não pode confiar em tudo, nem mesmo no software da própria empresa. Antes, achávamos que as vulnerabilidades de software eram como moscas que poderíamos enxotar individualmente; agora parecem mais um enxame de abelhas. Em média, o National Vulnerability Database \[4\] reporta mais de 15.000 novas vulnerabilidades de software por ano. Se você escreve ou compra um software, ele provavelmente terá vulnerabilidades em algum momento.
+Você não pode confiar em tudo, nem mesmo no software da própria empresa. Antes, achávamos que as vulnerabilidades de software eram como moscas que poderíamos enxotar individualmente; agora parecem mais um enxame de abelhas. Em média, o National Vulnerability Database [^4] reporta mais de 15.000 novas vulnerabilidades de software por ano. Se você escreve ou compra um software, ele provavelmente terá vulnerabilidades em algum momento.
 
 - Você também não pode confiar plenamente nas pessoas — elas cometem erros, ficam insatisfeitas e têm acesso total aos serviços internos. Primeiro, dezenas de milhares de ataques bem-sucedidos anualmente baseiam-se em phishing ou no roubo de credenciais válidas de funcionários. Segundo, com o advento das aplicações em nuvem e das equipes de trabalho móveis, os funcionários podem acessar recursos legitimamente a partir de diversas redes. Construir uma barreira não faz mais sentido quando as pessoas precisam cruzá-la constantemente apenas para realizar seu trabalho.
 
@@ -103,11 +103,11 @@ Queremos uma solução que não inclua segredos de longa duração (que podem se
 
 ### Passos em direção ao futuro
 
-Múltiplas iniciativas para resolver o problema de identidade de software foram desenvolvidas desde 2010. O Low Overhead Authentication Service (LOAS) do Google — posteriormente denominado Application Layer Transport Security (ALTS) \[1\] — estabeleceu um novo formato de identidade e um protocolo de rede para receber a identidade de software do ambiente de execução e aplicá-la a todas as comunicações de rede. Esse modelo foi chamado de "dial tone security" (segurança por discagem).
+Múltiplas iniciativas para resolver o problema de identidade de software foram desenvolvidas desde 2010. O Low Overhead Authentication Service (LOAS) do Google — posteriormente denominado Application Layer Transport Security (ALTS) [^5] — estabeleceu um novo formato de identidade e um protocolo de rede para receber a identidade de software do ambiente de execução e aplicá-la a todas as comunicações de rede. Esse modelo foi chamado de "dial tone security" (segurança por discagem).
 
-Em outro exemplo, a solução desenvolvida internamente pela Netflix — com o codinome Metatron \[2\] — estabelece identidade de software instância a instância, aproveitando as APIs de nuvem para atestar a imagem de máquina em execução nas instâncias e a integração com CI/CD para estabelecer vínculos criptográficos entre imagens de máquina e identidade de código. Essa identidade de software assume a forma de certificados X.509 para realizar autenticação mútua na comunicação de serviço a serviço, incluindo o acesso ao serviço de segredos desenvolvido como parte dessa solução, que habilita o gerenciamento de segredos sobre essa fundação.
+Em outro exemplo, a solução desenvolvida internamente pela Netflix — com o codinome Metatron [^6] — estabelece identidade de software instância a instância, aproveitando as APIs de nuvem para atestar a imagem de máquina em execução nas instâncias e a integração com CI/CD para estabelecer vínculos criptográficos entre imagens de máquina e identidade de código. Essa identidade de software assume a forma de certificados X.509 para realizar autenticação mútua na comunicação de serviço a serviço, incluindo o acesso ao serviço de segredos desenvolvido como parte dessa solução, que habilita o gerenciamento de segredos sobre essa fundação.
 
-Diversos outros esforços na indústria — incluindo os de empresas como o Facebook \[3\] — comprovam a necessidade de um sistema assim e ressaltam a dificuldade de sua implementação.
+Diversos outros esforços na indústria — incluindo os de empresas como o Facebook [^7] — comprovam a necessidade de um sistema assim e ressaltam a dificuldade de sua implementação.
 
 ### A Visão de um Secure Production Identity Framework For Everyone (SPIFFE)
 
@@ -121,11 +121,11 @@ O artigo de Beda foi apresentado no GlueCon em 2016 e expôs um problema difíci
 
 - Efetivamente dissociar o conceito de identidade dos localizadores de rede.
 
-\[1\] - https://cloud.google.com/security/encryption-in-transit/application-layertransport-security/
+[^5]: <https://cloud.google.com/security/encryption-in-transit/application-layertransport-security/>
 
-\[2\] - https://www.usenix.org/sites/default/files/conference/protectedfiles/enigma_haken_slides.pdf
+[^6]: <https://www.usenix.org/sites/default/files/conference/protectedfiles/enigma_haken_slides.pdf>
 
-\[3\] - https://engineering.fb.com/security/service-encryption/
+[^7]: <https://engineering.fb.com/security/service-encryption/>
 
 Após a introdução do conceito SPIFFE, realizou-se uma reunião no campus da Netflix com especialistas em identidade de serviços para discutir o formato e a viabilidade da proposta original. Muitos dos participantes haviam implementado, continuado a aprimorar e resolvido novamente o problema de identidade de workloads, o que evidencia uma oportunidade de colaboração comunitária. Os participantes desejavam alcançar interoperabilidade entre si e com outras organizações. Esses especialistas perceberam que haviam implementado soluções semelhantes para resolver o mesmo problema e que poderiam trabalhar juntos para definir um padrão comum.
 
