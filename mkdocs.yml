@@ -77,12 +77,27 @@ plugins:
 # Navigation structure
 nav:
   - Início: index.md
-  - Notas de Tradução: notas-traducao.md
-  - Glossário (EN → pt-BR): glossario.md
-  - Como Contribuir: contribuindo.md
-  - Atribuição e Licença: atribuicao.md
-  - Changelog: changelog.md
-  - Sobre: sobre.md
+  - O Livro:
+      - Notas de Tradução: livro/notas-traducao.md
+      - Sobre Zero, a Tartaruga: livro/sobre-zero.md
+      - 1. História e Motivação para o SPIFFE: livro/01-historia-e-motivacao.md
+      - 2. Benefícios: livro/02-beneficios.md
+      - 3. Conceitos Gerais de Identidade: livro/03-conceitos-de-identidade.md
+      - 4. Introdução aos Conceitos SPIFFE e SPIRE: livro/04-introducao-spiffe-spire.md
+      - 5. Antes de Começar: livro/05-antes-de-comecar.md
+      - 6. Projetando uma Implantação SPIRE: livro/06-projetando-implantacao-spire.md
+      - 7. Integrando com Outros: livro/07-integrando-com-outros.md
+      - 8. Usando Identidades SPIFFE para Informar a Autorização: livro/08-informar-autorizacao.md
+      - 9. Comparando SPIFFE com Outras Tecnologias: livro/09-comparando-tecnologias.md
+      - 10. Histórias de Profissionais: livro/10-historias-de-profissionais.md
+      - Glossário (do livro): livro/glossario.md
+      - Epílogo: livro/epilogo.md
+  - Projeto:
+      - Glossário de Tradução (EN → pt-BR): glossario.md
+      - Como Contribuir: contribuindo.md
+      - Atribuição e Licença: atribuicao.md
+      - Changelog: changelog.md
+      - Sobre: sobre.md
 
 # Copyright
 copyright: >

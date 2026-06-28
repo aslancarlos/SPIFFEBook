@@ -7,6 +7,10 @@
 *.jpg  filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 
+# Exceção: imagens do livro publicadas no site (ReadTheDocs/MkDocs) ficam como
+# arquivos Git normais — o build do RTD precisa delas presentes (não ponteiros LFS).
+docs/livro/media/** -filter -diff -merge
+
 # Normalização de fim de linha para arquivos de texto.
 *.md   text eol=lf
 LICENSE text eol=lf
