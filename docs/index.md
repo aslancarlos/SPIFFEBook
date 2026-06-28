@@ -5,31 +5,34 @@ Tradução para **português brasileiro (pt-BR)** do livro
 Infrastructure via Universal Identity***, a principal obra de referência sobre
 **SPIFFE** e **SPIRE**.
 
+[:material-book-open-variant: Começar a ler](livro/notas-traducao.md){ .md-button .md-button--primary }
+[:material-numeric-1-box: Ir ao Capítulo 1](livro/01-historia-e-motivacao.md){ .md-button }
+
 !!! warning "Projeto de tradução não oficial"
     Esta é uma obra derivada, traduzida de forma independente. **Não é
     endossada nem revisada** pelos autores originais, pela SPIFFE/SPIRE, pela
     CNCF ou pela HPE. Veja [Atribuição e Licença](atribuicao.md).
 
-## 📥 Baixar / ler o livro
+## 🐢 Sobre o que é este livro
 
-[:material-book-open-variant: Começar a ler](livro/notas-traducao.md){ .md-button .md-button--primary }
-[:material-download: Baixar o PDF (pt-BR)](https://github.com/aslancarlos/SPIFFEBook/raw/main/livro/SPIFFE-Book_pt-br.pdf){ .md-button }
+À medida que a infraestrutura moderna deixou de ser um monólito em um único
+servidor para virar centenas de microsserviços distribuídos por nuvens e data
+centers, o modelo de segurança de **perímetro** deixou de dar conta. A pergunta
+central passou a ser: *como um serviço prova de forma confiável **quem ele é**
+para outro serviço?*
 
-### Ler online
+- **SPIFFE** (*Secure Production Identity Framework For Everyone*) é o **padrão
+  aberto** que define uma identidade universal para cargas de trabalho
+  (*workloads*) — o **SPIFFE ID** e o documento verificável **SVID**.
+- **SPIRE** (*SPIFFE Runtime Environment*) é a **implementação de referência**
+  do SPIFFE: emite e renova identidades automaticamente, com atestação de nó e
+  de *workload*.
 
-<object
-  data="https://github.com/aslancarlos/SPIFFEBook/raw/main/livro/SPIFFE-Book_pt-br.pdf"
-  type="application/pdf"
-  width="100%"
-  height="720px">
-  <p>
-    Seu navegador não conseguiu exibir o PDF embutido.
-    <a href="https://github.com/aslancarlos/SPIFFEBook/raw/main/livro/SPIFFE-Book_pt-br.pdf">
-      Clique aqui para baixar o PDF (pt-BR)</a>.
-  </p>
-</object>
+Ambos são projetos de **código aberto da CNCF**. Este livro condensa a
+experiência de quem construiu esses sistemas em escala, do problema de
+identidade aos padrões de implantação na prática.
 
-## 📖 Sobre a obra
+## 📖 Informações da obra
 
 | | |
 |---|---|
@@ -37,11 +40,12 @@ Infrastructure via Universal Identity***, a principal obra de referência sobre
 | **Original em** | <https://spiffe.io/book/> |
 | **Licença** | Creative Commons Attribution 4.0 International (CC BY 4.0) |
 | **Idioma desta tradução** | Português (pt-BR) |
+| **Tradução** | Aslan Carlos M. Ramos |
 | **Status** | 🚧 Em andamento |
 
 ## 📚 O Livro (capítulos)
 
-A tradução completa está disponível capítulo a capítulo:
+A tradução está disponível para **leitura online**, capítulo a capítulo:
 
 1. [História e Motivação para o SPIFFE](livro/01-historia-e-motivacao.md)
 2. [Benefícios](livro/02-beneficios.md)
@@ -54,7 +58,9 @@ A tradução completa está disponível capítulo a capítulo:
 9. [Comparando SPIFFE com Outras Tecnologias](livro/09-comparando-tecnologias.md)
 10. [Histórias de Profissionais](livro/10-historias-de-profissionais.md)
 
-Mais: [Notas de Tradução](livro/notas-traducao.md) · [Glossário do livro](livro/glossario.md) · [Epílogo](livro/epilogo.md)
+Complementos: [Notas de Tradução](livro/notas-traducao.md) ·
+[Sobre Zero, a Tartaruga](livro/sobre-zero.md) ·
+[Glossário do livro](livro/glossario.md) · [Epílogo](livro/epilogo.md)
 
 ## 🧭 Sobre o projeto
 
